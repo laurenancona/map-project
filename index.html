@@ -4,21 +4,37 @@
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="css/app.css" rel="stylesheet" media="screen">
-
+    <link href="css/app.css" rel="stylesheet" media="screen">   
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.6/mapbox.css' rel='stylesheet' />
     <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" />
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <!-- LA Google Tag Manager, of course -->
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W6WFRN"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W6WFRN');</script>
+  <!-- End Google Tag Manager -->
+    <div id="top">
+        <h1>Blueprinted</h1>
+    </div>
     <div id="hover"></div>
 
     <div id="map"></div>
+    <div id="desc" class="pull-right">custom cyanotype-inspired map tiles by <a href="http://twitter.com/laurenancona">Lauren Ancona</a> </div>
 
-
+    <script>
+        L.mapbox.accessToken = 'pk.eyJ1IjoibGF1cmVuYW5jb25hIiwiYSI6Im5EaldBcVUifQ.MTeXi8ZLmYhMBxnZ0nBG3A';
+        var map = L.mapbox.map('map', 'laurenancona.lgh0leco')
+    //.setView([40, -74.50], 9);  
+    </script>
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-    <script src="js/leaflet.utfgrid.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/app.js"></script>
 
